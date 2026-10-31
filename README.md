@@ -1,12 +1,28 @@
 # AI Function-Calling Router
 
+[![Live Demo](https://img.shields.io/badge/Vercel-Live_Demo-000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-function-calling-router.vercel.app/)
 [![Python Version](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.14-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688.svg)](https://fastapi.tiangolo.com)
 [![Pydantic v2](https://img.shields.io/badge/pydantic-v2.5+-green.svg)](https://docs.pydantic.dev/)
 [![Pytest Status](https://img.shields.io/badge/tests-92%20passed-success.svg)](https://docs.pytest.org/)
 [![Docker Support](https://img.shields.io/badge/docker-ready-blue.svg)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/license-MIT-purple.svg)](LICENSE)
 
 A high-reliability, production-grade routing engine for translating natural language queries into strictly typed tool calls. Engineered with deterministic fault-injection middleware, request-isolated telemetry, and four targeted recovery policies to eliminate silent execution failures and recover gracefully from edge-case anomalies.
+
+## Live Deployment & Interactive Playground
+
+The project is deployed and live on Vercel with an interactive testing dashboard and full OpenAPI endpoints:
+
+* Live Interactive Web Playground: https://ai-function-calling-router.vercel.app/
+* Interactive Swagger OpenAPI Docs: https://ai-function-calling-router.vercel.app/docs
+* ReDoc API Reference: https://ai-function-calling-router.vercel.app/redoc
+* Health Check Endpoint: https://ai-function-calling-router.vercel.app/api/health
+* Route Execution Endpoint: https://ai-function-calling-router.vercel.app/api/route
+* Evaluation Metrics Endpoint: https://ai-function-calling-router.vercel.app/api/metrics
+* Registered Tools Endpoint: https://ai-function-calling-router.vercel.app/api/tools
+
+The live playground allows you to select preset test scenarios, toggle recovery policies on and off, simulate deterministic timeouts and malformed responses, and view real-time Pydantic validation boundaries and telemetry traces.
 
 ## Executive Summary
 
@@ -191,6 +207,9 @@ Ai-Function-Calling-Router/
 ├── generate_dataset.py           Dataset generation utility
 ├── append_dataset.py             Dataset augmentation helper
 ├── requirements.txt              Core production and testing dependencies
+├── vercel.json                   Vercel serverless deployment routing
+├── api/
+│   └── index.py                  FastAPI serverless entrypoint and web UI
 ├── data/
 │   └── eval.jsonl                60-case curated evaluation benchmark
 ├── docs/
@@ -281,6 +300,16 @@ cp .env.example .env
 ```
 
 Ensure `PROVIDER_MODE=offline` is set in `.env` to execute deterministic benchmarks without third-party API credentials.
+
+### Starting the Local Web Server
+
+Launch the FastAPI interactive playground and REST API locally:
+
+```bash
+python -m uvicorn api.index:app --reload --port 8000
+```
+
+Navigate to `http://127.0.0.1:8000/` in your browser to access the playground, or `http://127.0.0.1:8000/docs` for the interactive Swagger documentation.
 
 ## Running Tests
 
