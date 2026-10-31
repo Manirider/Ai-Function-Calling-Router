@@ -1,0 +1,14 @@
+{
+  "dataset_size": 60,
+  "checksum_sha256": "31878e5face18f8889fd0f67faf51f3016f174f763eda5bca98640c9f1c50b2a",
+  "baseline_completion_rate": 0.5833333333333334,
+  "recovery_completion_rate": 0.9,
+  "baseline_silent_wrong_rate": 0.0,
+  "recovery_silent_wrong_rate": 0.0,
+  "mean_recovery_attempts": 0.38333333333333336,
+  "total_provider_calls": 60,
+  "total_tool_executions": 65,
+  "p50_latency_ms": 0.031948089599609375,
+  "p95_latency_ms": 0.06198883056640625,
+  "generated_at": "2026-10-31T05:36:17.297582Z"
+}

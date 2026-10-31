@@ -1,0 +1,45 @@
+{
+  "baseline": {
+    "failure_distribution": {
+      "none": 35,
+      "missing_field": 6,
+      "type_error": 2,
+      "timeout": 8,
+      "malformed_response": 7,
+      "unknown_tool": 2
+    },
+    "recovery_distribution": {
+      "none": 60
+    },
+    "per_tool_completion": {
+      "FlightSearch": 0.5,
+      "CalendarBooking": 0.6923076923076923,
+      "WeatherLookup": 0.6428571428571429,
+      "UnitConversion": 0.6153846153846154,
+      "Unknown": 0.0
+    }
+  },
+  "recovery_active": {
+    "failure_distribution": {
+      "none": 42,
+      "missing_field": 1,
+      "timeout": 8,
+      "malformed_response": 7,
+      "unknown_tool": 2
+    },
+    "recovery_distribution": {
+      "none": 37,
+      "missing_field": 6,
+      "type_error": 2,
+      "timeout": 8,
+      "schema_repair": 7
+    },
+    "per_tool_completion": {
+      "FlightSearch": 0.8888888888888888,
+      "CalendarBooking": 0.9230769230769231,
+      "WeatherLookup": 0.9285714285714286,
+      "UnitConversion": 1.0,
+      "Unknown": 0.0
+    }
+  }
+}

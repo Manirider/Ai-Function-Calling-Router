@@ -1,0 +1,20 @@
+{
+  "dataset_size": 60,
+  "checksum_sha256": "31878e5face18f8889fd0f67faf51f3016f174f763eda5bca98640c9f1c50b2a",
+  "tool_distribution": {
+    "FlightSearch": 18,
+    "CalendarBooking": 13,
+    "WeatherLookup": 14,
+    "UnitConversion": 13,
+    "Unknown": 2
+  },
+  "fault_distribution": {
+    "{\"persistence\": \"once\", \"type\": \"NONE\"}": 45,
+    "{\"persistence\": \"once\", \"type\": \"TIMEOUT\"}": 7,
+    "{\"persistence\": \"always\", \"type\": \"TIMEOUT_ALWAYS\"}": 1,
+    "{\"persistence\": \"once\", \"type\": \"MALFORMED_RESPONSE\"}": 5,
+    "{\"persistence\": \"once\", \"type\": \"MALFORMED_ONCE\"}": 1,
+    "{\"persistence\": \"always\", \"type\": \"MALFORMED_ALWAYS\"}": 1
+  },
+  "reference_date": "2025-01-15"
+}
