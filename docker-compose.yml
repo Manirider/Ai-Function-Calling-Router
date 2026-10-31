@@ -1,0 +1,11 @@
+services:
+  evaluator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./output:/app/output
+    environment:
+      - PROVIDER_MODE=offline
+      - OUTPUT_DIR=output
+    command: python evaluate_router.py
